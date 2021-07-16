@@ -30,7 +30,12 @@
     # How does a for loop iterate through a string?
 
 def one(string):
-    return ""
+    new_str = ""
+    for char in string:
+        new_str += char*3
+    return new_str
+
+print(one("The"))
 
     # <QUESTION 2>
 
@@ -48,7 +53,15 @@ def one(string):
     # Use your CLI to access the Python documentation and get help manipulating strings - help(range).
 
 def two(num):
-    return False
+    
+    if num > 1:
+        for i in range(2, num):
+            if (num% i) == 0:
+                return False
+            else:
+                return True
+
+print(two(73))
 
     # <QUESTION 3>
 

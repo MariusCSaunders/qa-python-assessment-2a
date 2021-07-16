@@ -228,7 +228,24 @@ def seven(a, b, c):
     # Use the cli to access the documentation help(str.replace)
 
 def eight(string, num):
-    return ""
+    
+    length = len(string)
+    middle = length // 2
+    index = (num-1) // 2
+    
+
+    if num == 1:
+
+        result = string[0 : middle : ] + string[middle+1 : :]
+        return result
+
+    start = middle - index
+    stop = middle + index
+
+    result = string[0: start:] + string[stop + 1::]
+
+    return result
+    
 
     # <QUESTION 9>
 
@@ -246,10 +263,29 @@ def eight(string, num):
 
 def nine(string1, string2):
     
-    return string2 in string1.lower()
+    if string1 > string2:
+        short = list(string1)
+        long = string2
+    else:
+        short = list(string2)
+        long = string1
+
+    count = 0
+    for i in range(0, len(short)):
+        if short[i] in long:
+            count = 1
+        
+    
+    if count == len(short):
+        return True
+    else:
+        return False
+
+    
+
  
 
-print(nine("tree", "tiredest"))
+
     # <QUESTION 10>
 
     # Write a function which takes 2 integers greater than 0, X,Y as input and generates a 2-dimensional array. 
@@ -277,4 +313,3 @@ def ten(a, b):
 
     return array
 
-print(ten(3,2))

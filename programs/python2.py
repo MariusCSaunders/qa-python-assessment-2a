@@ -263,25 +263,26 @@ def eight(string, num):
 
 def nine(string1, string2):
     
-    if string1 > string2:
-        short = list(string1)
-        long = string2
-    else:
+    if len(string1) > len(string2):
         short = list(string2)
         long = string1
+    else:
+        short = list(string1)
+        long = string2
 
+   
     count = 0
     for i in range(0, len(short)):
         if short[i] in long:
-            count = 1
-        
-    
-    if count == len(short):
+            count += 1
+            
+                
+    if count >= len(short):
         return True
     else:
         return False
 
-    
+
 
  
 

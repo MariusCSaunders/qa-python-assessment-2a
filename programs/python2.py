@@ -170,7 +170,14 @@ def five():
     # There are no hints for this question.
     
 def six(string):
-    return False
+    
+    substring = "py"
+
+    if string.lower().endswith(substring):
+        return True
+    else:
+        return False
+        
 
     # <QUESTION 7>
 

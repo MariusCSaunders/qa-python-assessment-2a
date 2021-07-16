@@ -245,8 +245,11 @@ def eight(string, num):
     # There are no hints for this question.
 
 def nine(string1, string2):
-    return False
+    
+    return string2 in string1.lower()
+ 
 
+print(nine("tree", "tiredest"))
     # <QUESTION 10>
 
     # Write a function which takes 2 integers greater than 0, X,Y as input and generates a 2-dimensional array. 
@@ -263,4 +266,15 @@ def nine(string1, string2):
     # Think about nesting for loops.
 
 def ten(a, b):
-    return []
+    
+    row_num = b
+    col_num = a
+    array = [[0 for col in range(col_num)] for row in range(row_num)]
+
+    for row in range(row_num):
+        for col in range(col_num):
+            array[row][col]= row*col
+
+    return array
+
+print(ten(3,2))

@@ -177,7 +177,7 @@ def six(string):
         return True
     else:
         return False
-        
+
 
     # <QUESTION 7>
 
@@ -201,7 +201,16 @@ def six(string):
     # Use the cli to access the documentation help(list.sort)
 
 def seven(a, b, c):
-    return False
+    
+    list = [a, b ,c]
+
+    list.sort()
+
+    if (list[1] - list[0]) == (list[2] - list[1]):
+        return True
+    else:
+        return False
+
 
     # <QUESTION 8>
 

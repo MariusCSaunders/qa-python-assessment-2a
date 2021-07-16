@@ -1,3 +1,4 @@
+import random
     # INSTRUCTIONS
 
     # In case it is not clear, the Question appears first, then examples, then any hints and finally the function that you need to complete appears underneath:
@@ -88,8 +89,6 @@ def three(a):
 
     return result
 
-
-print(three(9))
     # <QUESTION 4>
 
     # Given two Strings of equal length, 'merge' them into one String.
@@ -135,10 +134,6 @@ def four(string1, string2):
       j += 1
     return result
 
-
-
-
-print(four("String","Fridge"))
     # <QUESTION 5>
 
     # Write a function to randomly generate a list with 5 even numbers between 100 and 200 inclusive.
@@ -154,7 +149,9 @@ print(four("String","Fridge"))
     # The random module contains a function called randint.
 
 def five():
-    return []
+    
+    result = random.sample([i for i in range(100,200) if i%2==0], 5)
+    return result
 
     # <QUESTION 6>
 

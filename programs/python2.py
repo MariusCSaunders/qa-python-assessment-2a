@@ -77,8 +77,18 @@ def two(num):
     # What happens if you multiply a string by a number?
 
 def three(a):
-    return 1
+    result=0
+    
+    n1 = int( "%s" % a )
+    n2 = int( "%s%s" % (a,a) )
+    n3 = int( "%s%s%s" % (a,a,a) )
+    n4 = int( "%s%s%s%s" % (a,a,a,a) )
 
+    result = n1 + n2 + n3 + n4
+
+    return result
+
+print(three(9))
     # <QUESTION 4>
 
     # Given two Strings of equal length, 'merge' them into one String.
